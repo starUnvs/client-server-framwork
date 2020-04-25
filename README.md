@@ -1,10 +1,10 @@
 ## client-server-framwork-in-linux
 A multiprocessing(use fork) client/server framework implementation in linux, using shared memory(shmget etc.) and signal(semget etc.). 
 
-#Client
+# Client
 Client can send message to server and receive message from server. 
 
-#Server
+# Server
 Server can receive message from multiple clients, and broadcast the message to all clients.
 
 The main process creates a subprocess for each client through fork, and uses select to accept clients' connection. By this way, the main process is not blocked.
